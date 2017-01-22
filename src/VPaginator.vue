@@ -1,10 +1,10 @@
 <template>
   <div class="v-paginator">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--primary mdl-button-sm" @click="fetchData(prev_page_url)" :disabled="!prev_page_url">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--primary mdl-button-sm" @click="fetchData(prev_page_url)" v-show="!prev_page_url">
       {{config.previous_button_text}}
     </button>
     <span>Page {{current_page}} of {{last_page}}</span>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--primary mdl-button-sm" @click="fetchData(next_page_url)" :disabled="!next_page_url">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--primary mdl-button-sm" @click="fetchData(next_page_url)" v-show="!next_page_url">
       {{config.next_button_text}}
     </button>
   </div>
@@ -81,9 +81,3 @@ export default {
   }
 }
 </script>
-
-<style>
-    button[disabled=disabled], button:disabled {
-        color: #fff;
-    }
-</style>

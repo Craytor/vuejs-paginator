@@ -81,3 +81,9 @@ export default {
   }
 }
 </script>
+
+<style>
+    button[disabled=disabled], button:disabled {
+        color: #fff;
+    }
+</style>
